@@ -5,7 +5,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { WhatsAppIcon } from "./WhatsAppIcon";
 import { Logo } from "./Logo";
-import { ThemeToggle } from "./ThemeToggle";
 import { BUSINESS, NAV_LINKS } from "@/lib/constants";
 
 export function Header() {
@@ -85,14 +84,10 @@ export function Header() {
             <WhatsAppIcon className="w-4 h-4 relative z-10" />
             <span className="relative z-10">WhatsApp Us</span>
           </motion.a>
-          <div className="ml-1 border-l border-white/10 pl-3">
-            <ThemeToggle />
-          </div>
         </div>
 
         {/* Mobile Right Actions */}
         <div className="flex lg:hidden items-center gap-2">
-          <ThemeToggle />
           <motion.button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className="p-2.5 rounded-xl hover:bg-white/5 transition-colors"

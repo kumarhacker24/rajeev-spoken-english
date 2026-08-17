@@ -29,7 +29,7 @@ export function MobileActions() {
           href={BUSINESS.whatsappLink}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex-1 flex flex-col items-center justify-center gap-1 py-3 rounded-3xl bg-gradient-to-br from-accent to-accent-dark text-white font-bold text-[11px] shadow-[0_4px_12px_rgba(245,158,11,0.3)] relative overflow-hidden group active:scale-95 transition-transform"
+          className="flex-1 flex flex-col items-center justify-center gap-1 py-3 rounded-3xl bg-[#25D366] text-white font-bold text-[11px] shadow-md shadow-[#25D366]/20 relative overflow-hidden group active:scale-95 transition-transform"
         >
           {/* Shimmer effect */}
           <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/30 to-transparent skew-x-[-20deg] group-hover:animate-[shimmer-sweep_2s_infinite]" />
@@ -39,7 +39,7 @@ export function MobileActions() {
         
         <a
           href={BUSINESS.phoneLink1}
-          className="flex-1 flex flex-col items-center justify-center gap-1 py-3 rounded-3xl bg-gradient-to-br from-primary to-primary-dark text-white font-bold text-[11px] shadow-[0_4px_12px_rgba(13,148,136,0.3)] active:scale-95 transition-transform"
+          className="flex-1 flex flex-col items-center justify-center gap-1 py-3 rounded-3xl bg-primary text-white font-bold text-[11px] shadow-md shadow-primary/20 active:scale-95 transition-transform"
         >
           <Phone className="w-5 h-5" />
           <span className="uppercase tracking-wider">Call</span>
@@ -49,7 +49,7 @@ export function MobileActions() {
           href={BUSINESS.directionsLink}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex-1 flex flex-col items-center justify-center gap-1 py-3 rounded-3xl bg-surface-alt text-text font-bold text-[11px] border border-border active:scale-95 transition-transform"
+          className="flex-1 flex flex-col items-center justify-center gap-1 py-3 rounded-3xl bg-white text-primary font-bold text-[11px] border border-primary/20 shadow-sm active:scale-95 transition-transform"
         >
           <Navigation className="w-5 h-5" />
           <span className="uppercase tracking-wider">Map</span>
