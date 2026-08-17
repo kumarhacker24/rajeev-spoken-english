@@ -1,0 +1,20 @@
+<svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Outer Speech Bubble + Right Book Page -->
+  <path
+    d="M 22 8 C 18 8 18 13 18 13 V 27 C 18 27 22 22 28 22 V 10 C 28 10 25 8 22 8 Z M 18 13 C 18 13 11 13 7 17 C 3 21 6 27 6 27 L 4 33 L 11 31 C 11 31 16 33 22 29 L 28 22"
+    stroke="#0A2540"
+    stroke-width="3"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    fill="none"
+  />
+  <!-- Inner Book Page (Left Side) -->
+  <path
+    d="M 18 13 C 18 13 14 8 10 8 V 20 C 14 20 18 24 18 24"
+    stroke="#0066FF"
+    stroke-width="3"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    fill="none"
+  />
+</svg>
