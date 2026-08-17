@@ -21,7 +21,11 @@ export function Header() {
   }, []);
 
   const handleNavClick = () => {
-    setIsMobileMenuOpen(false);
+    // Slight delay ensures the browser registers the tap and native navigation
+    // before the menu begins animating out and removing elements from the DOM.
+    setTimeout(() => {
+      setIsMobileMenuOpen(false);
+    }, 150);
   };
 
   return (
@@ -127,9 +131,9 @@ export function Header() {
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
-            initial={{ opacity: 0, height: 0, filter: "blur(10px)" }}
-            animate={{ opacity: 1, height: "auto", filter: "blur(0px)" }}
-            exit={{ opacity: 0, height: 0, filter: "blur(10px)" }}
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
             className="lg:hidden overflow-hidden bg-[#0B1120]/95 backdrop-blur-2xl border-t border-white/5"
           >
