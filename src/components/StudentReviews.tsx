@@ -115,40 +115,66 @@ export function StudentReviews() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-50px" }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8"
         >
           {REVIEWS.map((review, idx) => (
             <motion.div
               key={idx}
               variants={cardVariants}
-              className="card-premium p-6 flex flex-col h-full relative group"
+              whileHover={{ y: -10, scale: 1.01 }}
+              className="group relative flex flex-col h-full rounded-[2rem] border border-border/50 bg-surface shadow-sm overflow-hidden transition-all duration-500 hover:shadow-2xl hover:shadow-primary/20 hover:border-primary/40"
             >
-              <Quote className="absolute top-6 right-6 w-8 h-8 text-border/40 group-hover:text-primary/10 transition-colors" />
-              
-              <div className="flex gap-1 mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <Star
-                    key={i}
-                    className={`w-4 h-4 ${
-                      i < review.rating
-                        ? "text-star fill-star"
-                        : "text-border fill-transparent"
-                    }`}
-                  />
-                ))}
+              {/* Abstract glowing background blobs for aesthetic appeal */}
+              <div className="absolute top-0 right-0 w-40 h-40 bg-primary/20 rounded-bl-full -z-0 opacity-40 group-hover:opacity-80 group-hover:scale-110 transition-all duration-700 ease-out blur-2xl"></div>
+              <div className="absolute bottom-24 left-0 w-32 h-32 bg-accent/15 rounded-tr-full -z-0 opacity-0 group-hover:opacity-60 group-hover:-translate-y-4 transition-all duration-700 ease-out blur-xl"></div>
+
+              {/* Review Text Section */}
+              <div className="relative p-6 md:p-8 flex-grow z-10">
+                <Quote className="absolute top-6 right-6 w-12 h-12 text-primary/10 group-hover:text-primary/30 group-hover:scale-110 group-hover:-rotate-12 transition-all duration-500" />
+                
+                <div className="flex gap-1 mb-6 relative z-10">
+                  {[...Array(5)].map((_, i) => (
+                    <motion.div 
+                      key={i} 
+                      whileHover={{ scale: 1.2, rotate: 15 }}
+                      transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                    >
+                      <Star
+                        className={`w-5 h-5 ${
+                          i < review.rating
+                            ? "text-star fill-star group-hover:drop-shadow-[0_0_8px_rgba(250,204,21,0.6)] transition-all duration-300"
+                            : "text-border fill-transparent"
+                        }`}
+                      />
+                    </motion.div>
+                  ))}
+                </div>
+                
+                <p className="text-text-secondary font-medium leading-relaxed italic text-base md:text-lg relative z-10 group-hover:text-text transition-colors duration-300">
+                  &quot;{review.review}&quot;
+                </p>
               </div>
               
-              <p className="text-text-secondary font-medium leading-relaxed flex-grow italic mb-6 text-sm md:text-base">
-                &quot;{review.review}&quot;
-              </p>
-              
-              <div className="flex items-center gap-3 mt-auto pt-4 border-t border-border/50">
-                <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold">
-                  {review.name.charAt(0)}
-                </div>
-                <div>
-                  <h4 className="font-bold text-text text-sm">{review.name}</h4>
-                  <p className="text-xs text-text-muted">Student</p>
+              {/* Student Info Section with vivid color separation */}
+              <div className="relative mt-auto p-5 px-6 md:px-8 bg-gradient-to-r from-primary to-primary-light overflow-hidden shadow-[0_-10px_30px_-15px_rgba(13,148,136,0.5)]">
+                {/* Decorative sheen effect on hover */}
+                <div className="absolute top-0 left-[-100%] w-1/2 h-full bg-white/20 skew-x-[-20deg] group-hover:left-[200%] transition-all duration-1000 ease-in-out z-0"></div>
+                
+                <div className="flex items-center gap-4 relative z-10">
+                  <div className="relative">
+                    <div className="absolute inset-0 bg-white rounded-full blur-md opacity-0 group-hover:opacity-40 transition-opacity duration-300"></div>
+                    <div className="w-14 h-14 relative rounded-full bg-white flex items-center justify-center text-primary-dark font-extrabold text-xl shadow-lg group-hover:scale-110 group-hover:-rotate-12 transition-all duration-500 border border-white/50">
+                      {review.name.charAt(0)}
+                    </div>
+                  </div>
+                  <div>
+                    <h4 className="font-bold italic text-white text-lg tracking-wide group-hover:translate-x-1 transition-transform duration-300 drop-shadow-sm bg-black/20 px-3 py-1 rounded-md inline-block shadow-inner backdrop-blur-md border border-white/10">{review.name}</h4>
+                    <div className="block mt-2">
+                      <div className="inline-block bg-black/15 px-2.5 py-0.5 rounded-full border border-white/10 backdrop-blur-sm group-hover:translate-x-1 transition-transform duration-300 delay-75 shadow-sm">
+                        <p className="text-[11px] font-bold text-white/90 uppercase tracking-widest">Student</p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </motion.div>
