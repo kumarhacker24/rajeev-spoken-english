@@ -19,12 +19,29 @@ export function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const handleNavClick = () => {
-    // Slight delay ensures the browser registers the tap and native navigation
-    // before the menu begins animating out and removing elements from the DOM.
-    setTimeout(() => {
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    const href = e.currentTarget.getAttribute("href");
+    if (href && href.startsWith("#")) {
+      e.preventDefault();
+      const targetId = href.slice(1);
+      const targetEl = document.getElementById(targetId);
+
+      // Close the menu first so it's out of the way
       setIsMobileMenuOpen(false);
-    }, 150);
+
+      // Scroll to the section after a brief delay so the menu close doesn't
+      // interfere with the layout shift during scroll.
+      setTimeout(() => {
+        if (targetEl) {
+          targetEl.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+        // Also update the URL hash for consistency
+        window.history.pushState(null, "", href);
+      }, 300);
+    } else {
+      // External links (e.g. WhatsApp) — just close the menu
+      setIsMobileMenuOpen(false);
+    }
   };
 
   return (
