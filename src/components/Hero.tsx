@@ -148,14 +148,16 @@ export function Hero() {
 
       {/* Aurora glow orbs */}
       <motion.div
-        className="absolute top-[15%] left-[20%] w-[400px] h-[400px] bg-primary/20 rounded-full blur-[120px] pointer-events-none"
+        className="hidden md:block absolute top-[15%] left-[20%] w-[400px] h-[400px] bg-primary/20 rounded-full blur-[120px] pointer-events-none"
         animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.5, 0.3] }}
         transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
+        style={{ willChange: "transform, opacity" }}
       />
       <motion.div
-        className="absolute bottom-[20%] right-[15%] w-[350px] h-[350px] bg-accent/10 rounded-full blur-[100px] pointer-events-none"
+        className="hidden md:block absolute bottom-[20%] right-[15%] w-[350px] h-[350px] bg-accent/10 rounded-full blur-[100px] pointer-events-none"
         animate={{ scale: [1, 1.15, 1], opacity: [0.2, 0.4, 0.2] }}
         transition={{ duration: 12, repeat: Infinity, ease: "easeInOut", delay: 3 }}
+        style={{ willChange: "transform, opacity" }}
       />
 
       {/* Floating decorative shapes */}
@@ -325,7 +327,7 @@ export function Hero() {
                       src={src}
                       alt=""
                       fill
-                      className="object-cover object-center scale-110 opacity-50 blur-xl"
+                      className="object-cover object-center scale-110 opacity-30 md:opacity-50 blur-md md:blur-xl"
                       sizes="(max-width: 768px) 100vw, 448px"
                       aria-hidden="true"
                     />

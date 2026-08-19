@@ -3,8 +3,8 @@
 import React from "react";
 import { motion, useReducedMotion } from "framer-motion";
 
-export type LogoTheme = "light" | "dark" | "monochrome";
-export type LogoVariant = "horizontal" | "compact" | "symbol" | "animated";
+type LogoTheme = "light" | "dark" | "monochrome";
+type LogoVariant = "horizontal" | "compact" | "symbol" | "animated";
 
 export interface LogoProps {
   variant?: LogoVariant;
@@ -118,25 +118,25 @@ const LogoText = ({ theme, compact = false }: { theme: LogoTheme; compact?: bool
   );
 };
 
-export const LogoSymbol = ({ theme = "light", className = "" }: { theme?: LogoTheme; className?: string }) => (
+const LogoSymbol = ({ theme = "light", className = "" }: { theme?: LogoTheme; className?: string }) => (
   <LogoSymbolSVG theme={theme} className={`w-8 h-8 ${className}`} />
 );
 
-export const LogoHorizontal = ({ theme = "light", className = "" }: { theme?: LogoTheme; className?: string }) => (
+const LogoHorizontal = ({ theme = "light", className = "" }: { theme?: LogoTheme; className?: string }) => (
   <div className={`flex items-center gap-3 ${className}`}>
     <LogoSymbolSVG theme={theme} className="w-10 h-10 md:w-12 md:h-12 flex-shrink-0" />
     <LogoText theme={theme} />
   </div>
 );
 
-export const LogoCompact = ({ theme = "light", className = "" }: { theme?: LogoTheme; className?: string }) => (
+const LogoCompact = ({ theme = "light", className = "" }: { theme?: LogoTheme; className?: string }) => (
   <div className={`flex items-center gap-2 ${className}`}>
     <LogoSymbolSVG theme={theme} className="w-8 h-8 flex-shrink-0" />
     <LogoText theme={theme} compact />
   </div>
 );
 
-export const AnimatedLogo = ({ theme = "light", className = "", onComplete }: { theme?: LogoTheme; className?: string, onComplete?: () => void }) => {
+const AnimatedLogo = ({ theme = "light", className = "", onComplete }: { theme?: LogoTheme; className?: string, onComplete?: () => void }) => {
   const prefersReducedMotion = useReducedMotion();
   const isDark = theme === "dark";
   const isMono = theme === "monochrome";

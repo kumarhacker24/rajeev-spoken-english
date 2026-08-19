@@ -221,18 +221,22 @@ body {
    ============================================================ */
 .animate-float {
   animation: float 6s ease-in-out infinite;
+  will-change: transform;
 }
 
 .animate-float-slow {
   animation: float 8s ease-in-out infinite;
+  will-change: transform;
 }
 
 .animate-float-delayed {
   animation: float 6s ease-in-out 2s infinite;
+  will-change: transform;
 }
 
 .animate-float-rotate {
   animation: float-rotate 7s ease-in-out infinite;
+  will-change: transform;
 }
 
 .animate-gradient {
@@ -242,18 +246,22 @@ body {
 
 .animate-aurora {
   animation: aurora-pulse 8s ease-in-out infinite;
+  will-change: transform, opacity;
 }
 
 .animate-pulse-glow {
   animation: pulse-glow 3s ease-in-out infinite;
+  will-change: box-shadow;
 }
 
 .animate-scale-pulse {
   animation: scale-pulse 4s ease-in-out infinite;
+  will-change: transform;
 }
 
 .animate-spin-slow {
   animation: spin-slow 20s linear infinite;
+  will-change: transform;
 }
 
 .animate-twinkle {
