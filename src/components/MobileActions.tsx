@@ -38,7 +38,7 @@ export function MobileActions() {
         </a>
         
         <a
-          href={BUSINESS.phoneLink1}
+          href={BUSINESS.phoneLink}
           className="flex-1 flex flex-col items-center justify-center gap-1 py-3 rounded-3xl bg-primary text-white font-bold text-[11px] shadow-md shadow-primary/20 active:scale-95 transition-transform"
         >
           <Phone className="w-5 h-5" />

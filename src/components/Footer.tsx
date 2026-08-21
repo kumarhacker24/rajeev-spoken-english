@@ -108,9 +108,6 @@ export function Footer() {
               </motion.span>
               {" "}by <span className="text-white font-bold tracking-wide">PIYUSH SINGH</span>
             </p>
-            <p className="text-xs text-slate-400 font-medium mt-1 text-center md:text-right max-w-[280px] sm:max-w-none">
-              Premium Software & Web Developer • For Custom Business Solutions: <a href="tel:+919406968755" className="text-primary-light hover:text-white transition-colors font-bold">+91 9406968755</a>
-            </p>
           </div>
         </div>
       </div>
