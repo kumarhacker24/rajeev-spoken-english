@@ -88,7 +88,7 @@ export function Experience() {
             >
               <Image
                 src="/images/classroom-session.webp"
-                alt="Interactive classroom session at Rajeev Spoken English Classes"
+                alt="Interactive classroom session at Rajeev Sir's Spoken English Classes"
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
                 sizes="(max-width: 768px) 100vw, 50vw"

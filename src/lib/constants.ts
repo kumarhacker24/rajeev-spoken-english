@@ -5,15 +5,14 @@
 // ============================================================
 
 export const BUSINESS = {
-  name: "Rajeev Spoken English Classes",
+  name: "Rajeev Sir's Spoken English Classes",
   associatedBrand: "XTREME EDUCATION",
   tagline: "Speak English with Confidence",
   description:
     "Transform your spoken English skills with expert-led, offline classes in Jabalpur. Join a trusted institute with a proven track record of results.",
 
   // Contact
-  phone1: "9406647081",
-  phone2: "7724991771",
+  phone: "7724991771",
   whatsappNumber: "7724991771", // Primary WhatsApp number
 
   // Location
@@ -37,25 +36,22 @@ export const BUSINESS = {
   get fullAddress() {
     return `${this.address.line1}, ${this.address.line2}, ${this.address.area}, ${this.address.city} – ${this.address.pincode}, ${this.address.state}`;
   },
-  get phoneLink1() {
-    return `tel:+91${this.phone1}`;
-  },
-  get phoneLink2() {
-    return `tel:+91${this.phone2}`;
+  get phoneLink() {
+    return `tel:+91${this.phone}`;
   },
   get whatsappLink() {
     return `https://wa.me/91${this.whatsappNumber}?text=${encodeURIComponent(
-      "Hi! I'm interested in joining Rajeev Spoken English Classes. Please share more details."
+      "Hi! I'm interested in joining Rajeev Sir's Spoken English Classes. Please share more details."
     )}`;
   },
   get directionsLink() {
     return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-      "Rajeev Spoken English Classes, Pushpak Nagar, GCF, Near Shri Ram Marriage Garden, Adhartal, Jabalpur 482004"
+      "Rajeev Sir's Spoken English Classes, Pushpak Nagar, GCF, Near Shri Ram Marriage Garden, Adhartal, Jabalpur 482004"
     )}`;
   },
   get mapsEmbedUrl() {
     return `https://www.google.com/maps?q=${encodeURIComponent(
-      "Rajeev Spoken English Classes, Pushpak Nagar, Adhartal, Jabalpur 482004"
+      "Rajeev Sir's Spoken English Classes, Pushpak Nagar, Adhartal, Jabalpur 482004"
     )}&output=embed`;
   },
 } as const;
@@ -89,7 +85,7 @@ export const FAQ_DATA = [
   },
   {
     question: "How can I enquire about joining?",
-    answer: `You can reach us by calling ${BUSINESS.phone1} or ${BUSINESS.phone2}, or send us a message on WhatsApp for a quick response.`,
+    answer: `You can reach us by calling ${BUSINESS.phone} or send us a message on WhatsApp for a quick response.`,
   },
   {
     question: "What is the rating of the institute?",
@@ -184,7 +180,7 @@ export const JSON_LD_SCHEMA = {
   name: BUSINESS.name,
   description: BUSINESS.description,
   url: "https://rajeevspokenenglish.vercel.app",
-  telephone: `+91${BUSINESS.phone1}`,
+  telephone: `+91${BUSINESS.phone}`,
   address: {
     "@type": "PostalAddress",
     streetAddress: `${BUSINESS.address.line1}, ${BUSINESS.address.line2}`,

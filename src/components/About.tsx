@@ -86,7 +86,7 @@ export function About() {
             <span className="text-gradient">Starts Here</span>
           </h2>
           <p className="mt-5 text-text-secondary font-medium text-base md:text-lg leading-relaxed">
-            Rajeev Spoken English Classes is a trusted, offline coaching
+            Rajeev Sir's Spoken English Classes is a trusted, offline coaching
             institute in Adhartal, Jabalpur — dedicated to helping learners of
             all levels speak English with clarity and confidence.
           </p>

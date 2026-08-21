@@ -28,16 +28,16 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "Rajeev Spoken English Classes | Spoken English in Adhartal, Jabalpur",
+  title: "Rajeev Sir's Spoken English Classes | Spoken English in Adhartal, Jabalpur",
   description:
-    "Join Rajeev Spoken English Classes in Adhartal, Jabalpur for expert offline spoken English coaching. Rated 4.9★ on Justdial. Build confidence, fluency, and communication skills. Call now!",
+    "Join Rajeev Sir's Spoken English Classes in Adhartal, Jabalpur for expert offline spoken English coaching. Rated 4.9★ on Justdial. Build confidence, fluency, and communication skills. Call now!",
   keywords: [
     "Spoken English Classes in Jabalpur",
     "Spoken English Classes in Adhartal",
     "English Speaking Course Jabalpur",
     "Spoken English Coaching Jabalpur",
     "English Classes near Adhartal",
-    "Rajeev Spoken English Classes",
+    "Rajeev Sir's Spoken English Classes",
     "Learn English in Jabalpur",
     "English Speaking Classes near me",
     "Best Spoken English Classes Jabalpur",
@@ -56,13 +56,13 @@ export const metadata: Metadata = {
     url: "https://rajeevspokenenglish.vercel.app",
     siteName: BUSINESS.name,
     title:
-      "Rajeev Spoken English Classes | Spoken English in Adhartal, Jabalpur",
+      "Rajeev Sir's Spoken English Classes | Spoken English in Adhartal, Jabalpur",
     description:
       "Transform your spoken English with expert-led, in-person classes in Adhartal, Jabalpur. Rated 4.9★ on Justdial. 100% Result-focused approach.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Rajeev Spoken English Classes | Jabalpur",
+    title: "Rajeev Sir's Spoken English Classes | Jabalpur",
     description:
       "Expert offline spoken English classes in Adhartal, Jabalpur. Rated 4.9★. Start speaking with confidence today!",
   },

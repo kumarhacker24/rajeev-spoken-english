@@ -249,7 +249,7 @@ export function Hero() {
                 <span className="relative z-10">WhatsApp Rajeev Sir</span>
               </motion.a>
               <motion.a
-                href={BUSINESS.phoneLink1}
+                href={BUSINESS.phoneLink}
                 className="btn-outline-light px-7 py-4 text-base"
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
@@ -333,7 +333,7 @@ export function Hero() {
                     />
                     <Image
                       src={src}
-                      alt={`Rajeev Spoken English Classes — Slide ${index + 1}`}
+                      alt={`Rajeev Sir's Spoken English Classes — Slide ${index + 1}`}
                       fill
                       className="object-contain object-center drop-shadow-2xl"
                       sizes="(max-width: 768px) 100vw, 448px"
@@ -353,7 +353,7 @@ export function Hero() {
                     Our Students, Our Pride
                   </p>
                   <p className="text-white/70 text-sm mt-0.5">
-                    Rajeev Sir&apos;s Spoken English — Adhartal
+                    Rajeev Sir&apos;s Spoken English Classes — Adhartal
                   </p>
                 </motion.div>
 

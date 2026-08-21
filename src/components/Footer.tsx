@@ -66,24 +66,13 @@ export function Footer() {
             <ul className="flex flex-col gap-4">
               <li>
                 <a
-                  href={BUSINESS.phoneLink1}
+                  href={BUSINESS.phoneLink}
                   className="flex items-center gap-3 text-sm md:text-base text-slate-300 font-medium hover:text-white transition-colors group"
                 >
                   <div className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-primary/20 group-hover:text-primary-light transition-colors">
                     <Phone className="w-3.5 h-3.5 flex-shrink-0" />
                   </div>
-                  +91 {BUSINESS.phone1}
-                </a>
-              </li>
-              <li>
-                <a
-                  href={BUSINESS.phoneLink2}
-                  className="flex items-center gap-3 text-sm md:text-base text-slate-300 font-medium hover:text-white transition-colors group"
-                >
-                  <div className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-primary/20 group-hover:text-primary-light transition-colors">
-                    <Phone className="w-3.5 h-3.5 flex-shrink-0" />
-                  </div>
-                  +91 {BUSINESS.phone2}
+                  +91 {BUSINESS.phone}
                 </a>
               </li>
               <li className="flex items-start gap-3 text-sm md:text-base text-slate-300 font-medium mt-2">

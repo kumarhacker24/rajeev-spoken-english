@@ -84,7 +84,7 @@ export function Gallery() {
           </h2>
           <p className="mt-5 text-text-secondary font-medium text-base md:text-lg leading-relaxed">
             From prize ceremonies to interactive sessions — a glimpse into the vibrant learning
-            environment at Rajeev Spoken English Classes.
+            environment at Rajeev Sir's Spoken English Classes.
           </p>
         </motion.div>
 
@@ -145,7 +145,7 @@ export function Gallery() {
             />
             <Image
               src="/images/new-batches.webp"
-              alt="New Batches Starting — Rajeev Spoken English Classes"
+              alt="New Batches Starting — Rajeev Sir's Spoken English Classes"
               fill
               className="object-contain object-right md:object-center drop-shadow-2xl transition-transform duration-700 group-hover:scale-105"
               sizes="100vw"

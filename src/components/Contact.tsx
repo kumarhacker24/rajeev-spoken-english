@@ -94,18 +94,11 @@ export function Contact() {
                   </h3>
                   <div className="flex flex-col gap-2 mt-3">
                     <a
-                      href={BUSINESS.phoneLink1}
+                      href={BUSINESS.phoneLink}
                       className="text-text-secondary hover:text-primary transition-colors font-bold md:text-lg flex items-center gap-2"
                     >
                       <span className="w-1.5 h-1.5 rounded-full bg-border group-hover:bg-primary transition-colors" />
-                      +91 {BUSINESS.phone1}
-                    </a>
-                    <a
-                      href={BUSINESS.phoneLink2}
-                      className="text-text-secondary hover:text-primary transition-colors font-bold md:text-lg flex items-center gap-2"
-                    >
-                      <span className="w-1.5 h-1.5 rounded-full bg-border group-hover:bg-primary transition-colors" />
-                      +91 {BUSINESS.phone2}
+                      +91 {BUSINESS.phone}
                     </a>
                   </div>
                 </div>
@@ -130,7 +123,7 @@ export function Contact() {
                 <span className="relative z-10">WhatsApp Us</span>
               </a>
               <a
-                href={BUSINESS.phoneLink1}
+                href={BUSINESS.phoneLink}
                 className="flex-1 btn-outline py-4.5 text-base"
               >
                 <Phone className="w-5 h-5" />
