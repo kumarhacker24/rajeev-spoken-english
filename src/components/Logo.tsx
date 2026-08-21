@@ -106,7 +106,7 @@ const LogoText = ({ theme, compact = false }: { theme: LogoTheme; compact?: bool
         className="font-display font-black leading-none tracking-tight"
         style={{ color: primaryColor, fontSize: compact ? "1.25rem" : "1.75rem" }}
       >
-        RAJEEV
+        RAJEEV SIR'S
       </span>
       <span
         className={`font-body font-bold uppercase tracking-[0.15em] ${compact ? "mt-0.5" : "mt-1"}`}
@@ -170,7 +170,7 @@ const AnimatedLogo = ({ theme = "light", className = "", onComplete }: { theme?:
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, delay: 1.2, ease: "easeOut" }}
         >
-          RAJEEV
+          RAJEEV SIR'S
         </motion.span>
         {/* Descriptor reveal */}
         <motion.span
