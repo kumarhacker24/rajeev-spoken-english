@@ -146,39 +146,14 @@ export function Hero() {
         }}
       />
 
-      {/* Aurora glow orbs */}
-      <motion.div
-        className="hidden md:block absolute top-[15%] left-[20%] w-[400px] h-[400px] bg-primary/20 rounded-full blur-[120px] pointer-events-none"
-        animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.5, 0.3] }}
-        transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-        style={{ willChange: "transform, opacity" }}
-      />
-      <motion.div
-        className="hidden md:block absolute bottom-[20%] right-[15%] w-[350px] h-[350px] bg-accent/10 rounded-full blur-[100px] pointer-events-none"
-        animate={{ scale: [1, 1.15, 1], opacity: [0.2, 0.4, 0.2] }}
-        transition={{ duration: 12, repeat: Infinity, ease: "easeInOut", delay: 3 }}
-        style={{ willChange: "transform, opacity" }}
-      />
+      {/* Aurora glow orbs (CSS animations for better performance) */}
+      <div className="hidden md:block absolute top-[15%] left-[20%] w-[400px] h-[400px] bg-primary/20 rounded-full blur-[120px] pointer-events-none animate-aurora" />
+      <div className="hidden md:block absolute bottom-[20%] right-[15%] w-[350px] h-[350px] bg-accent/10 rounded-full blur-[100px] pointer-events-none animate-aurora" style={{ animationDelay: '3s' }} />
 
-      {/* Floating decorative shapes */}
-      <motion.div
-        className="absolute top-[12%] right-[8%] w-14 h-14 border border-white/[0.06] rounded-xl"
-        animate={{ rotate: 360, y: [0, -15, 0] }}
-        transition={{
-          rotate: { duration: 25, repeat: Infinity, ease: "linear" },
-          y: { duration: 5, repeat: Infinity, ease: "easeInOut" },
-        }}
-      />
-      <motion.div
-        className="absolute bottom-[30%] left-[5%] w-5 h-5 bg-primary/20 rounded-full"
-        animate={{ y: [0, -25, 0], opacity: [0.3, 0.7, 0.3] }}
-        transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-      />
-      <motion.div
-        className="absolute top-[55%] right-[25%] w-2 h-2 bg-accent/40 rounded-full"
-        animate={{ scale: [0, 1, 0], opacity: [0, 1, 0] }}
-        transition={{ duration: 4, repeat: Infinity, delay: 1.5 }}
-      />
+      {/* Floating decorative shapes (Hidden on mobile for performance, using pure CSS) */}
+      <div className="hidden md:block absolute top-[12%] right-[8%] w-14 h-14 border border-white/[0.06] rounded-xl animate-float-rotate" />
+      <div className="hidden md:block absolute bottom-[30%] left-[5%] w-5 h-5 bg-primary/20 rounded-full animate-float" />
+      <div className="hidden md:block absolute top-[55%] right-[25%] w-2 h-2 bg-accent/40 rounded-full animate-scale-pulse" style={{ animationDelay: '1.5s' }} />
 
       {/* Content */}
       <div className="relative z-10 container-main pt-24 pb-12 md:pt-32 md:pb-24">
@@ -323,14 +298,17 @@ export function Hero() {
                     }}
                     transition={{ duration: 1.2, ease: "easeInOut" }}
                   >
-                    <Image
-                      src={src}
-                      alt=""
-                      fill
-                      className="object-cover object-center scale-110 opacity-30 md:opacity-50 blur-md md:blur-xl"
-                      sizes="(max-width: 768px) 100vw, 448px"
-                      aria-hidden="true"
-                    />
+                    {/* Only show the blurred background layer on desktop to save mobile performance */}
+                    <div className="hidden md:block">
+                      <Image
+                        src={src}
+                        alt=""
+                        fill
+                        className="object-cover object-center scale-110 opacity-50 blur-xl"
+                        sizes="448px"
+                        aria-hidden="true"
+                      />
+                    </div>
                     <Image
                       src={src}
                       alt={`Rajeev Sir's Spoken English Classes — Slide ${index + 1}`}

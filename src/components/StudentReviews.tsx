@@ -124,9 +124,9 @@ export function StudentReviews() {
               whileHover={{ y: -10, scale: 1.01 }}
               className="group relative flex flex-col h-full rounded-[2rem] border border-border/50 bg-surface shadow-sm overflow-hidden transition-all duration-500 hover:shadow-2xl hover:shadow-primary/20 hover:border-primary/40"
             >
-              {/* Abstract glowing background blobs for aesthetic appeal */}
-              <div className="absolute top-0 right-0 w-40 h-40 bg-primary/20 rounded-bl-full -z-0 opacity-40 group-hover:opacity-80 group-hover:scale-110 transition-all duration-700 ease-out blur-2xl"></div>
-              <div className="absolute bottom-24 left-0 w-32 h-32 bg-accent/15 rounded-tr-full -z-0 opacity-0 group-hover:opacity-60 group-hover:-translate-y-4 transition-all duration-700 ease-out blur-xl"></div>
+              {/* Abstract glowing background blobs for aesthetic appeal (Hidden on mobile for performance) */}
+              <div className="hidden md:block absolute top-0 right-0 w-40 h-40 bg-primary/20 rounded-bl-full -z-0 opacity-40 group-hover:opacity-80 group-hover:scale-110 transition-all duration-700 ease-out blur-2xl"></div>
+              <div className="hidden md:block absolute bottom-24 left-0 w-32 h-32 bg-accent/15 rounded-tr-full -z-0 opacity-0 group-hover:opacity-60 group-hover:-translate-y-4 transition-all duration-700 ease-out blur-xl"></div>
 
               {/* Review Text Section */}
               <div className="relative p-6 md:p-8 flex-grow z-10">

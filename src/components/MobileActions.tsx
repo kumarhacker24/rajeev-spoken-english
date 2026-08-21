@@ -20,7 +20,7 @@ export function MobileActions() {
         damping: 20
       }}
     >
-      <div className="bg-surface/90 backdrop-blur-xl border border-border shadow-2xl shadow-black/10 rounded-[2rem] p-2 flex items-center justify-between gap-2 overflow-hidden relative">
+      <div className="bg-surface/95 backdrop-blur-md border border-border shadow-2xl shadow-black/10 rounded-[2rem] p-2 flex items-center justify-between gap-2 overflow-hidden relative">
         
         {/* Subtle gradient glow behind buttons */}
         <div className="absolute inset-0 bg-gradient-to-r from-accent/5 via-transparent to-primary/5 pointer-events-none" />
