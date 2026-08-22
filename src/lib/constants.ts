@@ -17,7 +17,7 @@ export const BUSINESS = {
 
   // Location
   address: {
-    line1: "Pushpak Nagar, GCF",
+    line1: "Pushpak Nagar",
     line2: "Near Shri Ram Marriage Garden",
     area: "Adhartal",
     city: "Jabalpur",
@@ -46,7 +46,7 @@ export const BUSINESS = {
   },
   get directionsLink() {
     return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-      "Rajeev Sir's Spoken English Classes, Pushpak Nagar, GCF, Near Shri Ram Marriage Garden, Adhartal, Jabalpur 482004"
+      "Rajeev Sir's Spoken English Classes, Pushpak Nagar, Near Shri Ram Marriage Garden, Adhartal, Jabalpur 482004"
     )}`;
   },
   get mapsEmbedUrl() {
